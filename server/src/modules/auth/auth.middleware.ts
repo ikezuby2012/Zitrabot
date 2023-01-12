@@ -9,7 +9,7 @@ import catchAsync from "../utils/catchAsync";
 // import config from '../../config';
 
 export const protect = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request | any, res: Response, next: NextFunction) => {
     let token: any;
     if (
       req.headers.authorization &&
